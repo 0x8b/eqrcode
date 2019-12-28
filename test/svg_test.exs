@@ -44,8 +44,7 @@ defmodule EQRCode.SVGTest do
 
   defp build_svgs(svgs, qr, label, opts) do
     svg = EQRCode.svg(qr, opts)
-    svg_c = EQRCode.svg(qr, [shape: "circle"] ++ opts)
-    svgs ++ [{label, svg <> svg_c}]
+    svgs ++ [{label, svg}]
   end
 
   defp gen_html(kw_svg) when is_list(kw_svg) do
